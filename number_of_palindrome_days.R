@@ -18,13 +18,13 @@
 
 ## I am generating all the dates since January 1, 0000 till today -------------
 
-my_dates<-format(seq.Date(
-from=as.Date("0000-01-01"),to=as.Date("2016-10-06"),by="day"
-),format="%Y-%m-%d")
+my_dates <- format(seq.Date(
+from = as.Date("0000-01-01"), to = as.Date("2016-10-06"), by = "day"
+), format = "%Y-%m-%d")
 
-my_dates_strings<-format(seq.Date(
-from=as.Date("0000-01-01"),to=as.Date("2016-10-06"),by="day"
-),format="%d%m%Y")
+my_dates_strings <- format(seq.Date(
+from = as.Date("0000-01-01"), to = as.Date("2016-10-06"), by = "day"
+), format = "%d%m%Y")
 
 
 ## ----------------------------------------------------------------------------
@@ -33,7 +33,7 @@ from=as.Date("0000-01-01"),to=as.Date("2016-10-06"),by="day"
 
 ## helper function ------------------------------------------------------------
 
-isPalindrome<-function(my_text){
+isPalindrome <- function(my_text){
 
 # '''
 # returns TRUE, if string "my_text" is palindrome, i. e. is read the same
@@ -42,15 +42,15 @@ isPalindrome<-function(my_text){
 # is omitted
 # '''
 
-if(nchar(my_text)==0|nchar(my_text)==1){
+if(nchar(my_text) == 0|nchar(my_text) == 1){
 
 return(TRUE)
 
 }else{
 
-if(substr(my_text,1,1)==substr(my_text,nchar(my_text),nchar(my_text))){
+if(substr(my_text, 1, 1) == substr(my_text, nchar(my_text), nchar(my_text))){
 
-isPalindrome(substr(my_text,2,nchar(my_text)-1))
+isPalindrome(substr(my_text, 2, nchar(my_text) - 1))
 
 }else{return(FALSE)}
 
@@ -65,13 +65,13 @@ isPalindrome(substr(my_text,2,nchar(my_text)-1))
 
 ## let's analyze all the dates whether they are palindromic -------------------
 
-is_palindrome_day<-unlist(lapply(
+is_palindrome_day <- unlist(lapply(
 my_dates_strings,
 function(x){
 ifelse(
 isPalindrome(x),
 TRUE,
-if(substr(x,1,1)=="0"){isPalindrome(substr(x,2,nchar(x)))}else{FALSE}
+if(substr(x, 1, 1) == "0"){isPalindrome(substr(x, 2, nchar(x)))}else{FALSE}
 )
 }
 ))
