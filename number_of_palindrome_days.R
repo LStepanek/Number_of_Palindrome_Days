@@ -2,7 +2,7 @@
 ###############################################################################
 ###############################################################################
 
-## Today, October 6, 2016, is considered to by a unique day since the date
+## Today, October 6, 2016, is considered to be a unique day since the date
 ## format in terms of "DDMMYYYY" is palindrome, i. e. sequence of characters
 ## which reads the same backward or forward.
 
