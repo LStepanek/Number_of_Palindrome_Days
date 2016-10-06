@@ -93,7 +93,15 @@ length(which(is_palindrome_day))    # 319
 
 ## let's save these days in format YYYY-MM-DD ---------------------------------
 
-writeLines(text = my_dates[is_palindrome_day], con = "palindrome_days.txt")
+write.csv(
+x = as.data.frame(
+cbind(
+"date (YYYY-MM-DD)" = my_dates[is_palindrome_day],
+"date ((D)DMMYYYY)" = my_dates_strings[is_palindrome_day]
+)
+),
+file = "palindrome_days.csv"
+)
 
 
 ## ----------------------------------------------------------------------------
