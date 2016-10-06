@@ -84,7 +84,7 @@ if(substr(x, 1, 1) == "0"){isPalindrome(substr(x, 2, nchar(x)))}else{FALSE}
 ## which days are palindrome days and what about their number -----------------
 
 my_dates[is_palindrome_day]
-length(which(is_palindrome_day))
+length(which(is_palindrome_day))    # 319
 
 
 ## ----------------------------------------------------------------------------
