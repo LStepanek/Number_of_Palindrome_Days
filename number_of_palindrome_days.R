@@ -100,6 +100,7 @@ cbind(
 "date ((D)DMMYYYY)" = my_dates_strings[is_palindrome_day]
 )
 ),
+row.names = FALSE,
 file = "palindrome_days.csv"
 )
 
